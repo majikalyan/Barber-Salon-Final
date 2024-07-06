@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+VIC:wght@100..400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    outline: none;
+}
+:root{
+    --bg1:#151828;
+    --bg2:#1B1F34;
+    --body:#959DCC;
+    --brand:#FFAB76;
+    --white:#fff;
+    font-family: "Pacifico", cursive;
+    font-family: "Playwrite AU VIC", cursive;
+}
+body{
+    font-family: "Inter", sans-serif;
+    color: var(--body);
+    line-height: 1.8;
+    background-color: var(--bg1);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Dela Gothic One", sans-serif;
+    color: white;
+}
+a{
+    color: var(--body);
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+a:hover{
+    color: var(--brand);
+}
+.link-more{
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    left: 1px;
+}
+.link-more .icon{
+    transition: all 0.4s ease;
+}
+.link-more:hover .icon{
+    transform: translateX(8px);
+}
+img{
+    width: 100%;
+}
+section{
+    padding-top: 160px;
+    padding-bottom: 160px;
+    position: relative;
+}
+.intro{
+    margin-bottom: 60px;
+}
+.intro h1{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.intro h6{
+    color: var(--brand);
+}
+.intro p{
+    max-width: 500px;
+    margin: auto;
+}
+.cta-btns{
+    margin-top: 60px;
+}
+.navbar{
+    background: linear-gradient(to bottom,#1B1F34,rgba(27,31,52,0.9));
+}
+.navbar .navbar-nav .nav-link.active{
+    color: var(--brand);
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--brand);
+}
+.navbar .navbar-nav li a{
+    color: var(--body);
+}
+.navbar-brand{
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 32px;
+}
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+  }
+#hero{
+    position: relative;
+    background: linear-gradient(to right,#1B1F34,rgba(27,31,52,0.0)),url(../images/banner.jpg);
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+}
+#hero p{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-family: "Pacifico", cursive;
+    font-size: 30px;
+}
+.box{
+    position: absolute;
+    text-align: center;
+    /* background-color: var(--body); */
+    background: linear-gradient(to bottom,#1B1F34,rgba(149, 164, 241, 0.9));
+    border-radius: 20px;
+    border-color: #FFAB76;
+    /* border: 3px solid var(--brand); */
+    right: 3%;
+    bottom: 55%;
+    padding: 10px 10px;
+    animation-name:  box_animation1;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+@keyframes box_animation1{
+    0%{
+       border: none;
+    }
+    25%{
+        border-left:5px dashed #f8711e ;
+    }
+    50%{
+        border-bottom:5px dashed #f8711e ;
+    }
+    75%{
+        border-right:5px dashed #f8711e ;
+    }
+    100%{
+        border-top:5px dashed #f8711e ;
+    }
+}
+@keyframes box_animation2{
+    0%{
+       border: none;
+    }
+    25%{
+        border-left:3px dashed #f8711e ;
+    }
+    50%{
+        border-bottom:3px dashed #f8711e ;
+    }
+    75%{
+        border-right:3px dashed #f8711e ;
+    }
+    100%{
+        border-top:3px dashed #f8711e ;
+    }
+}
+#hero .box h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px var(--brand);
+    font-family: "Playfair Display", serif;
+}
+#hero .box h2{
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    /* background: linear-gradient(to bottom,#bfc9f5,rgba(122, 141, 236, 0.9)); */
+    color: var(--bg2);
+    /* max-width: 400px; */
+    border-radius: 10px;
+}
+#hero .box p{
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--brand);
+}
+.btn{
+    padding: 16px 30px;
+    font-family: "Dela Gothic One", sans-serif;
+    transition: all 0.4s ease;
+    border-radius: 0;
+}
+.btn-brand{
+    background-color: var(--brand);
+}
+.btn-brand:hover{
+    background-color: transparent;
+    color: var(--brand);
+    border-color: var(--brand);
+}
+.btn-outline-brand{
+    background-color: transparent;
+    color: var(--brand);
+    border-color: var(--brand);
+}
+.btn-outline-brand:hover{
+    background-color: var(--brand);
+}
+#about{
+   position: relative;
+}
+#about::after{
+    content: "";
+    width: 25%;
+    height: 100%;
+    background-color: var(--brand);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#about h6{
+    color: var(--brand);
+}
+#about h1{
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+#services{
+    background-color: var(--bg2);
+}
+.service img{
+    transition: all 0.9s ease;
+}
+.service img:hover{
+    /* border: 3px solid var(--brand); */
+    transform: scale(1.1);
+    opacity: 0.5;
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+
+}
+#services .service .content{
+    padding: 32px;
+}
+#services .service p{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+#milestone{
+    background: linear-gradient(to right, rgba(27,31,52,0.8),rgba(27,31,52,0.8)),url(../images/pexels-nickoloui-1319459.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#milestone h1{
+    color: var(--brand);
+}
+.counter{
+    transition: all 0.5s ease;
+}
+.counter:hover{
+    transform: scale(1.2);
+}
+/* .counter:hover{
+    background-color: var(--body);
+    color: var(--bg1);
+} */
+.feature{
+    display: flex;
+    /* transition:all  0.3s ease-in ; */
+}
+.feature .icon-feature{
+    font-size: 36px;
+    color: var(--brand);
+    line-height: 1;
+    margin-right: 16px;
+}
+.feature p{
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+#team{
+    background-color: var(--bg2);
+}
+.team-member{
+    position: relative;
+}
+.team-member:hover .social-links{
+    opacity: 1;
+    top: 30px;
+}
+.team-member img:hover{
+    opacity: 0.5;
+}
+.team-member .social-links{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    transition: all 0.4s ease;
+    opacity: 0;
+
+}
+.social-links a{
+    width: 48px;
+    height: 48px;
+    background-color: var(--bg2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-links a:hover{
+    background-color: var(--brand);
+    color: var(--bg2);
+}
+
+#reviews{
+    background-color: var(--bg1);
+}
+.review{
+    padding: 28px;
+    background-color: var(--bg2);
+    position: relative;
+}
+.review img{
+    width: 60px;
+    border-radius: 100px;
+}
+.review .icon{
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: aqua;
+    border-radius: 100px;
+    position: absolute;
+    right: 32px;
+}
+.review{
+    transition: all 0.8s ease-out;
+}
+/* .review:hover{
+    transform: scale(1.1);
+} */
+ .slider_container .container{
+    /* padding: 0 15px; */
+    margin: 0 auto;
+ }
+.card_slider{
+    padding: 50px 0;
+}
+
+#blog{
+    background-color: var(--bg2);
+}
+.blog-post{
+    position: relative;
+}
+.blog-post .date{
+    width: 90px;
+    height: 90px;
+    background-color: var(--brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.blog-post img{
+    height: 500px;
+    transition: all 0.8s ease;
+}
+.blog-post img:hover{
+    opacity: 0.5;
+}
+.blog-post .day{
+    font-size: 32px;
+    font-family: "Dela Gothic One", sans-serif;
+    line-height: 1;
+    color: var(--bg1);
+}
+.blog-post .year{
+    color: var(--bg1);
+}
+
+#booking{
+    background: linear-gradient(to right, rgba(27,31,52,0.8),rgba(27,31,52,0.8)),url(../images/pexels-cottonbro-3992874.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#booking form{
+   background-color: var(--bg1);
+   padding: 32px;
+}
+#booking form .form-control{
+    background-color: var(--bg2);
+    border-radius: 0;
+    margin-top: 10px;
+    border-color: var(--bg2);
+    border: 2px solid var(--bg2);
+    color:var(--body);
+}
+#booking form .form-control::placeholder{
+    color:var(--body);
+}
+#booking form input{
+    height: 50px;
+}
+#booking form .form-control:focus{
+    box-shadow: none;
+    border-left-color: var(--brand);
+}
+footer{
+    padding-top: 60px;
+}
+footer .social-links{
+    display: flex;
+}
+footer .social-links a{
+    margin-right: 5px;
+}
+.footer-bottom{
+    padding: 30px 0;
+    border-top: 1px solid var(--bg2);
+}
+.footer-top{
+    padding-bottom: 30px;
+}
+
+
+@media screen and (max-width:1199px){
+    .intro{
+        margin-bottom: 50px;
+    }
+    .intro h1{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .cta-btns{
+        margin-top: 40px;
+    }
+    #about,
+    #services,
+    #milestone,
+    #features,
+    #team,
+    #reviews,
+    #blog,
+    #booking{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .box{
+        top: 5%;
+        left: 5%;
+        height: 200px;
+        width: 400px;
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .intro{
+        margin-bottom: 40px;
+    }
+    .intro h1{
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+    .cta-btns{
+        margin-top: 30px;
+    }
+    #about,
+    #services,
+    #milestone,
+    #features,
+    #team,
+    #reviews,
+    #blog,
+    #booking{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    #about h6{
+        color:white;
+    }
+    #about{
+        color:white;
+    }
+    .navbar{
+        background: var(--bg2);
+    }
+    .box{
+        top: 5%;
+        right: 5%;
+        height: 200px;
+    }
+}
+@media screen and (max-width:767px){
+    .intro{
+        margin-bottom: 30px;
+    }
+    .intro h1{
+        margin-top: 13px;
+        margin-bottom: 13px;
+    }
+    .cta-btns{
+        margin-top: 20px;
+    }
+    #about,
+    #services,
+    #milestone,
+    #features,
+    #team,
+    #reviews,
+    #blog,
+    #booking{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .box{
+        top: 5%;
+        right: 5%;
+        height: 150px;
+        width:300px ;
+    }
+    #hero .box h1{
+        font-size: 40px;
+    }
+    #hero .box h2{
+        font-size: 20px;
+    }
+
+}
+@media screen and (max-width:426px) {
+    .intro{
+        margin-bottom: 20px;
+    }
+    .intro h1{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .cta-btns{
+        margin-top: 10px;
+    }
+    #services .cta-btns{
+        margin-top: 0px;
+    }
+    /* .navbar-brand img{
+        width: 150px;
+    } */
+    /* .navbar-toggler-icon{
+        font-size: 15px;
+    } */
+    #about,
+    #services,
+    #milestone,
+    #features,
+    #team,
+    #reviews,
+    #blog,
+    #booking{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #booking form input{
+        height: 40px;
+        width: 100%;
+    }
+    #booking form{
+        background-color: var(--bg1);
+        padding: 20px 0;
+    }
+    .review img{
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+    }
+    .review{
+        padding: 15px 10px;
+    }
+    .review .icon{
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: aqua;
+        border-radius: 100px;
+        position: absolute;
+        right: 10px;
+    }
+    .box{
+        top: 3%;
+        left: 3%;
+        height: 100px;
+        width:250px ;
+        padding: 10px 10px;
+        animation-name:  box_animation2;
+    }
+    #hero .box h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px var(--brand);
+    }
+    #hero .box h2{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:321px){
+    .box{
+        top: 2%;
+        left: 3%;
+        height: 80px;
+        width:200px ;
+        padding: 10px 10px;
+        animation-name:  box_animation2;
+    }
+    #hero .box h1{
+        font-size: 25px;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px var(--brand);
+    }
+    #hero .box h2{
+        font-size: 12px;
+    }
+}
